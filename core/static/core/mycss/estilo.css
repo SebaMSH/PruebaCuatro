@@ -1,0 +1,57 @@
+#promocion {
+    background-color: #1860e2;
+    color: white;
+    border: 10px solid #080fef;
+    padding: 15px;
+    margin: 15px;
+}
+
+.carrusel {
+    margin-top: 20px
+}
+
+.descripcion {
+    margin-top: 40px;
+    margin-right: 100px;
+}
+
+.decoracion {
+    text-decoration: none;
+}
+
+.img-index-card {
+    width: 262.4px;
+    height: 254.15px;
+    border-radius: 5px;
+    padding: center;
+}
+
+.precio-boton-volver {
+    margin-top: 100px;
+}
+
+.img-tablas {
+    width: 500px;
+    height: 350px;
+    float: left;
+    margin-right: 10px;
+}
+
+.btn-volver {
+    text-decoration: none;
+}
+
+.estilo-lista {
+    list-style-type: circle;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 25px;
+    margin-block-end: 30px;
+}

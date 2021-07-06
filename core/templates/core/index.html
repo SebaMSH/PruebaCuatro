@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Tablazo</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static  'core/mycss/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Productos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{% url 'salada' %}">Tabla 1: Salada</a>
+                            <a class="dropdown-item" href="{% url 'dulce' %}">Tabla 2: Dulce</a>
+                            <a class="dropdown-item" href="{% url 'mixta' %}">Tabla 3: Mixta</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'nosotros' %}">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'sismos' %}">Sismos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'contacto' %}">Contactanos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'listar_proveedor' %}">Listar Proveedores</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container" class="carrusel">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{% static 'core/img/salada.jpg' %}" class="d-block w-100" alt="bootstrap" width="620px" height="450px">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Tablas a domicilio</h3>
+                                    <p>Salada</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'core/img/dulce.jpeg' %}" class="d-block w-100" alt="..." width="620px" height="450px">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Tablas a domicilio</h3>
+                                    <p>Dulce</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'core/img/mixta.jpg' %}" class="d-block w-100" alt="..." width="620px" height="450px">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Tablas a domicilio</h3>
+                                    <p>Mixta</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container descripcion ">
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card " style="width: 18rem;">
+                        <img class="img-index-card card-img-top" src="{% static 'core/img/salada.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Tabla 1: Salada</h5><br>
+                            <p class="card-text">Tabla para picotear y compartir en pareja o con tu familia cercana. Podrán disfrutar de gratos sabores durante una ocasión especial.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Valor: $15.000</li>
+
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn btn-info" href="{% url 'salada' %}" role="button">Ver</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img-index-card card-img-top" src="{% static 'core/img/dulce.jpeg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Tabla 2: Dulce</h5><br>
+                            <p class="card-text">Disfruta los sabores más dulces y exquisitos en compañía selecta. Debora chocolates, galletas, y todo tipo de delicias.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Valor: $15.000</li>
+
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn btn-info" href="{% url 'dulce' %}" role="button">Ver</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm ">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img-index-card card-img-top" src="{% static 'core/img/mixta.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Tabla 3: Mixta</h5><br>
+                            <p class="card-text">Tabla especial para mantener el justo equilibrio y todos disfruten según sus gustos. Esta tabla para picotear mixta te encantará.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Valor: $20.000</li>
+
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn btn-info" href="{% url 'mixta' %}" role="button">Ver</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="col alineacion" id="promocion">
+            Aprovecha el 15% de descuento en todos nuestros productos los dias Lunes y Jueves!!
+        </div>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}">
+    </script>
+</body>
+
+</html>
