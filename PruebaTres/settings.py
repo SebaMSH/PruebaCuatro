@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'rest_framework',
+    'PruebaTres',
 ]
 
 MIDDLEWARE = [
@@ -77,9 +79,9 @@ WSGI_APPLICATION = 'PruebaTres.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/XEPDB1',
-        'USER': 'pruebaTres',
-        'PASSWORD': 'pruebaTres',
+        'NAME': '127.0.0.1:1521/xe',
+        'USER': 'C##prueba',
+        'PASSWORD': 'prueba',
         'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',
