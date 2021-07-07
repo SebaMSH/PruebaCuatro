@@ -34,7 +34,7 @@ def lista_proveedores(request):
 def crud_proveedores(request, id):
     
     try:
-        proveedor = Proveedores.objects.get(proveedor = id)
+        proveedor = Proveedores.objects.get(idProveedor = id)
     except Proveedores.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
