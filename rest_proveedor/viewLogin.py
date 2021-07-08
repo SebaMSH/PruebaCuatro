@@ -22,7 +22,7 @@ def login(request):
 	try:
 		user = User.objects.get(username=username)
 	except User.DoesNotExist:
-		return Response("Usuario invÃ¡lido")
+		return Response("Usuario invalido")
 
 	#validamos la pass
 	pass_valido = check_password(password, user.password)

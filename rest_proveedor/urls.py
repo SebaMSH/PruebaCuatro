@@ -5,4 +5,4 @@ urlpatterns = [
     path('lista_proveedores', lista_proveedores, name="lista_proveedores"),
     path('crud_proveedores/<id>', crud_proveedores, name="crud_proveedores"),
     path('login', login, name="login"),
-]
+]   
