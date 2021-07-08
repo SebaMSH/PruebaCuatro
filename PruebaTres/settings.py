@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'PruebaTres.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/xe',
+        'NAME': '127.0.0.1:1521/XE',
         'USER': 'C##prueba',
         'PASSWORD': 'prueba',
         'TEST': {
